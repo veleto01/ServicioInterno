@@ -14,6 +14,7 @@ public class email {
     	this.asunto = asunto;
     	
     }
+    public email(){}
     
     public email(String destinatario,  String asunto) {
        	this.destinatario = destinatario;

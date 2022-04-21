@@ -20,16 +20,12 @@ public class emailService {
 	public boolean send(email mensaje) {
 
 		MimeMessage email = sender.createMimeMessage();
-
 		try {
-
 			MimeMessageHelper helper = new MimeMessageHelper(email,true);
-
-			//Campos necesarios para mandar el correo
-			helper.setFrom("MADCLOTHESemail@gmail.com"); // dirección origen
-			helper.setTo(mensaje.getDestinatario()); // dirección destino
-			helper.setSubject(mensaje.getAsunto()); // asunto del correo
-			helper.setText(mensaje.getTexto(), true); // cuerpo del mensaje
+			helper.setFrom("MADCLOTHESemail@gmail.com"); 
+			helper.setTo(mensaje.getDestinatario()); 
+			helper.setSubject(mensaje.getAsunto()); 
+			helper.setText(mensaje.getTexto(), true); 
 
 			sender.send(email);
 

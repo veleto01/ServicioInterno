@@ -18,8 +18,6 @@ import com.example.demo.*;
 @RestController
 public class emailController {
 
-   
-
     @Autowired
     private emailService envioCorreo;
 
@@ -32,8 +30,4 @@ public class emailController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-	
-
-  
-
 }
